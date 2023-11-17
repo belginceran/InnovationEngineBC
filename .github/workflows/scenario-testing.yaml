@@ -28,7 +28,7 @@ jobs:
         if: github.event_name != 'pull_request'
         with:
           inlineScript: |
-            make test-scenarios SUBSCRIPTION=${{ secrets.AZURE_SUBSCRIPTION }}
+            make test-upstream-scenarios SUBSCRIPTION=${{ secrets.AZURE_SUBSCRIPTION }}
       - name: Display ie.log file
         if: github.event_name != 'pull_request'
         run: |
